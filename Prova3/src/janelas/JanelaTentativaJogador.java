@@ -8,7 +8,7 @@ public class JanelaTentativaJogador extends JFrame {
 		setTitle("Jogo de Cartas");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBackground(Color.black);
-		setSize(670, 735);
+		setSize(670, 720);
 		setVisible(true);
 		setLocationRelativeTo(null);
 	}

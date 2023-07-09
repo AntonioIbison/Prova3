@@ -15,7 +15,7 @@ public class JanelaJogadores extends JPanel {
 		add(jogadorLabel, BorderLayout.NORTH);
 		add(painel1, BorderLayout.CENTER);
 		add(painel2, BorderLayout.SOUTH);
-		setSize(670, 735);
+		setSize(670, 730);
 		setVisible(true);
 	}
 }

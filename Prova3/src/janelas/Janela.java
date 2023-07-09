@@ -9,7 +9,7 @@ public class Janela extends JFrame {
 		setTitle("Inicio");
 		add(new JanelaJogadores(this, control));
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(670, 735);
+		setSize(670, 730);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
