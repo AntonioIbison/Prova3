@@ -7,7 +7,7 @@ import javax.swing.*;
 public class Janela extends JFrame {
 	public Janela(Controle control) {
 		setTitle("Inicio");
-		add(new JanelaJogadores(this,control));
+		add(new JanelaJogadores(this, control));
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(670, 735);
 		setLocationRelativeTo(null);
