@@ -12,10 +12,12 @@ import java.awt.event.ActionListener;
 public class PainelResultado extends JPanel {
 	private Controle controle;
 	private JanelaTentativaJogador janela;
+	private JLabel jogadorPontuacao;
 
 	public PainelResultado(Controle controle, JanelaTentativaJogador janela) {
 		this.controle = controle;
 		this.janela = janela;
+		janela.setSize(500, 700);
 		setLayout(new BorderLayout());
 		JLabel card = new JLabel(controle.getCartaEscolhida().getIcon());
 		JPanel jp = painelDeCima();
@@ -25,7 +27,9 @@ public class PainelResultado extends JPanel {
 		mid.setLayout(new GridLayout(4, 1));
 		mid.setBackground(Color.LIGHT_GRAY);
 		for (Jogador jogadore : controle.getJogadores()) {
-			mid.add(new JLabel("  " + jogadore.getNome() + ": " + jogadore.getPontos()));
+			jogadorPontuacao = new JLabel("" + jogadore.getNome() + ": " + jogadore.getPontos()+ " pontos");
+			jogadorPontuacao.setHorizontalAlignment(JLabel.CENTER);
+			mid.add(jogadorPontuacao);
 		}
 		add(mid, BorderLayout.CENTER);
 		botaoContinuar();
@@ -58,7 +62,8 @@ public class PainelResultado extends JPanel {
 		jp.setLayout(new BorderLayout());
 		add(jp, BorderLayout.NORTH);
 		jp.setBackground(Color.DARK_GRAY);
-		JLabel label = new JLabel(" Pontuação:");
+		JLabel label = new JLabel("Pontuação:");
+		label.setHorizontalAlignment(JLabel.CENTER);
 		label.setPreferredSize(new Dimension(70, 70));
 		label.setForeground(Color.WHITE);
 		jp.add(label, BorderLayout.SOUTH);
