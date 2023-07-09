@@ -5,9 +5,9 @@ import entidades.Jogador;
 import janelas.Janela;
 import janelas.JanelaJogadores;
 import janelas.JanelaTentativaJogador;
-import painels.PainelPalpiteCartas;
-import painels.PainelJogador;
-import painels.PainelResultado;
+import paineis.PainelPalpiteCartas;
+import paineis.PainelJogador;
+import paineis.PainelResultado;
 
 import javax.swing.*;
 import java.awt.*;
@@ -100,7 +100,7 @@ public class Controle {
                     Jogmaior = jogadore;
                 }
             }
-            JOptionPane.showMessageDialog(null, Jogmaior.getNome() + " Venceu!");
+            JOptionPane.showMessageDialog(null, Jogmaior.getNome() + " é o vencedor!");
 
         }
     }
@@ -141,7 +141,7 @@ public class Controle {
     }
     public void exibirTelaFinal(){
         JanelaTentativaJogador jt= new JanelaTentativaJogador();
-        jt.setTitle("ultima tela");
+        jt.setTitle("Pontuação");
         jt.add(new PainelResultado(this,jt));
         jt.setBackground(Color.DARK_GRAY);
         jt.setVisible(true);
