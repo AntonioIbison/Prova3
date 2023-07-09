@@ -1,6 +1,5 @@
 package execucao;
 import controle.Controle;
-import janelas.Janela;
 
 public class Main {
 
