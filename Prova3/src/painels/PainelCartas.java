@@ -1,4 +1,4 @@
-package painels;
+package paineis;
 
 import controle.Controle;
 import entidades.Carta;
@@ -15,7 +15,7 @@ public class PainelCartas extends JPanel {
 		this.controle=controle;
 		gerarCartasAleatorias();
 		setLayout(new GridLayout(2, 3));
-		setBackground(Color.gray);
+		setBackground(Color.lightGray);
 		setVisible(true);
 	}
 

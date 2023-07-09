@@ -1,4 +1,4 @@
-package painels;
+package paineis;
 
 import controle.Controle;
 import entidades.Jogador;

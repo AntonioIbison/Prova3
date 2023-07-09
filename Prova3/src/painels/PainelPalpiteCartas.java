@@ -1,4 +1,4 @@
-package painels;
+package paineis;
 
 import controle.Controle;
 import entidades.Jogador;
@@ -15,9 +15,11 @@ public class PainelPalpiteCartas extends JPanel {
     public PainelPalpiteCartas(JanelaTentativaJogador janela2, Controle controle) {
         this.controle=controle;
         this.janela2=janela2;
+        janela2.setSize(750, 400);
+        janela2.setLocationRelativeTo(null);
         setLayout(new BorderLayout());
         JLabel text=new JLabel(controle.getJogadorEscolha().getNome()+" Qual seu palpite?");
-        JButton botaoSalvar= new JButton("PROX JOGADOR");
+        JButton botaoSalvar= new JButton("Próximo Jogador");
         botaoSalvar.addActionListener(salvar);
         add(botaoSalvar,BorderLayout.SOUTH);
         add(text,BorderLayout.NORTH);

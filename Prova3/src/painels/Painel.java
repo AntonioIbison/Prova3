@@ -1,4 +1,4 @@
-package painels;
+package paineis;
 
 import controle.Controle;
 import janelas.Janela;
@@ -22,9 +22,9 @@ public class Painel extends JPanel {
 	public Painel(Janela janela, PainelCartas painelcartas, Controle controle) {
 		this.janela = janela;
 		this.painelcartas = painelcartas;
-		this.controle=controle;
+		this.controle = controle;
 		JLabel frase = new JLabel();
-		frase.setText("Descreva a Carta marcada");
+		frase.setText("Descreva a carta marcada");
 		texto = new JTextField();
 		JButton botaoPassarVez = new JButton("Passar a Vez");
 		botaoPassarVez.addActionListener(PassarVez);
@@ -32,9 +32,10 @@ public class Painel extends JPanel {
 		add(frase);
 		add(texto);
 		add(botaoPassarVez);
-		setBackground(Color.pink);
+		setBackground(Color.lightGray);
 		setVisible(true);
 	}
+
 	ActionListener PassarVez = new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			controle.getJogadorDaVez().setCarta(controle.getCartaclicada());
